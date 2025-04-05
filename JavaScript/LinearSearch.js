@@ -45,9 +45,43 @@ let ergebnis1 = linearSearch(zahlen, suchst)
 console.log(`Position: ${ergebnis1}`);
 
 console.log("------------------------------------------")
-// Schreibe eine Funktion linearSearch, die prüft, ob der Name "Aziz" im Array ist.
+// Schreibe eine Funktion linearSearch, die prüft, ob der Name "David" im Array ist.
 // Gib die Position (ab 1) zurück.
 // Wenn nicht gefunden, gib "Nicht gefunden" zurück.
 
 // Beispiel-Ausgabe:
-// Bei Suche nach "Aziz" → Ausgabe: Position: 5
+// Bei Suche nach "David" → Ausgabe: Position: 5
+
+let names = ["John", "Emma", "Lucas", "Olivia", "David", "Sophia", "Mark"];
+
+function linearSearch(nameSearch, target) {
+  
+    for (let i = 0; i < nameSearch.length; i++) {
+        if (nameSearch[i] === target) {
+            return i + 1; // Position ab 1
+        }
+    }
+    return "Not Found";
+}
+
+let such = "Emma";
+let result = linearSearch(names, such);
+console.log(`Position: ${result}`);
+
+console.log("-------------------------")
+
+let zahl = [25, 30, 18, 12, 45, 60, 22, 5, 9, 33];
+
+function suche(s,t){
+    
+    for(let i = 0; i < s.length; i++){
+        if(s[i] == t){
+            return ++i;
+        }
+    }
+    return "nix gefunden"
+}
+
+let n = 45
+let r = suche(zahl, n)
+console.log(`Position: ${r}` )
