@@ -16,3 +16,5 @@ function InsertSort() {
 }
 
 InsertSort();
+
+console.log("----------------------")
