@@ -7,9 +7,9 @@ let arr = [
 
 // Linear search function
 function linearSearch(array, target) {
-  for (let i = 1; i <= array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (array[i] === target) {
-      return i; // Position found
+      return ++i; // Position found
     }
   }
   return "Not found"; // Target not in array

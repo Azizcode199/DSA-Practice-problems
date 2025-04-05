@@ -9,14 +9,14 @@ let arr: number[] = [
 function linearSearch(array: number[], target: number): number | string {
   for (let i = 0; i < array.length; i++) {
     if (array[i] === target) {
-      return i; // Position found
+      return ++i; // Position found
     }
   }
   return "Not found"; // Target not in array
 }
 
 // Example: Search for number :
-let suchZahl: number = 4;
+let suchZahl: number = 20;
 let ergebnis: number | string = linearSearch(arr, suchZahl);
 
 console.log("Position:", ergebnis);
