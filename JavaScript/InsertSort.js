@@ -18,3 +18,4 @@ function InsertSort() {
 InsertSort();
 
 console.log("----------------------")
+clg("change name ")
