@@ -72,7 +72,6 @@ console.log("---------------------------")
 // Sort this list using insertion sort:
 // [10, 6, 8, 3, 2]
 
-// Rewrite the code (pseudocode or JavaScript). I'll check it for you 🙂
 
 let sort = [10, 6, 8, 3, 2]
 
@@ -98,7 +97,7 @@ console.log("-------------------------")
 // Sort this list using Insertion Sort:
 // [12, 5, 3, 15, 8, 1, 10]
 
-// Please rewrite the code – I'm waiting for your solution 😊
+
 
 let l = [12, 5, 3, 15, 8, 1, 10]
 function listCode(){
@@ -129,7 +128,7 @@ console.log("-----------------------------------")
 
 // Duplicate values
 
-// Write your code – I'm excited! 😎
+
 
 let newlist = [4, -1, 7, 4, 0, -3, 7, 2]
 function values(){
