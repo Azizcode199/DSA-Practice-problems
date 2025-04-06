@@ -18,4 +18,28 @@ function InsertSort() {
 InsertSort();
 
 console.log("----------------------")
-clg("change name ")
+
+// Sort the following list using insertion sort in pseudocode: [8, 3, 5, 1]
+
+let array = [8, 3, 5, 1];
+
+function insertion() {
+  for (let i = 1; i < array.length; i++) {
+    let temp1 = array[i];
+    let j = i - 1;
+    while (j >= 0 && array[j] > temp1) {  
+      array[j + 1] = array[j];
+      j--;
+    }
+    array[j + 1] = temp1;  
+  }
+
+  // Ausgabe
+  for (let i = 0; i < array.length; i++) { 
+    console.log(array[i]);
+  }
+}
+
+insertion();
+
+console.log("------------------------------------")
