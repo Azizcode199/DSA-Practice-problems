@@ -117,3 +117,63 @@ function listCode(){
 }
 
 listCode()
+
+console.log("-----------------------------------")
+// Task 5 – Challenge:
+// Use Insertion Sort to sort this list:
+// [4, -1, 7, 4, 0, -3, 7, 2]
+
+// 👉 Contains:
+
+// Negative numbers
+
+// Duplicate values
+
+// Write your code – I'm excited! 😎
+
+let newlist = [4, -1, 7, 4, 0, -3, 7, 2]
+function values(){
+  for(let i = 1; i < newlist.length; i++){
+    let temp = newlist[i]
+    let j = i - 1
+    while(j >=0 && newlist[j] > temp){
+      newlist[j + 1 ] = newlist[j]
+      j--
+    }
+    newlist[j+1] = temp
+  }
+  for(let i = 0; i < newlist.length;i++ ){
+    if(i === 0 || newlist[i] !== newlist[i- 1]){
+      console.log(`List: ${newlist[i]}`)
+    }
+    
+  } 
+}
+
+values()
+
+console.log("--------------------")
+// Task 6 – Bonus:
+// Use Insertion Sort to sort this list,
+// displaying each number only once:
+// [9, 4, -2, 7, 3, 4, 1, 0, -2, 9, 6, 3, 8]
+
+let sortNumber = [9, 4, -2, 7, 3, 4, 1, 0, -2, 9, 6, 3, 8]
+function numberlist(){
+  for(let i = 1; i < sortNumber.length; i++){
+    let temp = sortNumber[i]
+    let j = i - 1
+    while(j >= 0 && sortNumber[j] > temp ){
+      sortNumber[j + 1] = sortNumber[j]
+      j--
+    }
+    sortNumber[j + 1] = temp;
+  }
+  for(let i = 0; i < sortNumber.length; i++){
+    if(i === 0 || sortNumber[i] != sortNumber[i-1]){
+      console.log(`List: ${sortNumber[i]}`)
+    }
+  }
+}
+
+numberlist()
