@@ -23,11 +23,15 @@ function SelectionSort() {
       arr[i] = arr[min];
       arr[min] = temp;
     }
+    return arr
   }
 
-  for (let i = 0; i < arr.length; i++) {
-    console.log(`Sort: ${arr[i]}`);
-  }
+  // for (let i = 0; i < arr.length; i++) {
+  //   // console.log(`Sort: ${arr[i]}`);
+  //   console.log(arr[i])
+  // }
 }
 
-SelectionSort();
+const res = SelectionSort([4, 1, 6, 3, 2]);
+
+console.log(`Result Sort: ${res}`)
