@@ -1,5 +1,5 @@
 function getTimeTable(id: number): number[][] {
-    // Beispiel-Zeitplan (normalerweise aus Datenbank)
+    // Example schedule (usually from database)
     return [
       [9, 30, 1, 1, 0, 0, 1, 1, 1, 1],
       [10, 1, 0, 0, 1, 1, 0, 0, 1, 1],

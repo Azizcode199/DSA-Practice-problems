@@ -18,7 +18,7 @@ function getAppointment(month, day, id, slot) {
     return false;
   }
   
-// // Beispiel-Termine für Arzt mit ID = 1
+
 // function getTimeTable(id) {
 //     // Beispiel: 3 Tage mit je 8 Slots (0 = frei, 1 = belegt)
 //     return [
