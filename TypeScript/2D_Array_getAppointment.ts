@@ -1,5 +1,5 @@
 function getAppointment(month: number, day: number, id: number, time_slot: number): boolean {
-  let treffer: boolean = false;
+  let match: boolean = false;
   let planTime: number[][] = getTimeTable(id);
 
   for (let i = 0; i < planTime.length; i++) {
@@ -7,18 +7,18 @@ function getAppointment(month: number, day: number, id: number, time_slot: numbe
       if (time_slot < 0) {
         for (let z = 0; z < 8; z++) {
           if (planTime[i][2 + z] === 0) {
-            treffer = true;
+            match = true;
           }
         }
       } else {
         if (planTime[i][2 + time_slot] === 0) {
-          treffer = true;
+          match = true;
         }
       }
     }
   }
 
-  return treffer;
+  return match;
 }
 function getTimeTable(id: number): number[][] {
   throw new Error("Function not implemented.");
