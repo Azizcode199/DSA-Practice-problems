@@ -38,3 +38,32 @@ Mehrere Anzeigen (Observers) wollen sofort sehen, wenn der Kurs sich ändert.
 Aufgabe:
 Schreib die Methode notifyObservers() in Pseudocode.
 Die Methode soll alle Observer benachrichtigen mit update().
+
+
+Klasse StockData
+  Methode notifyObservers()
+    Für i = 0; i < observers.length;i++
+      observers[i].update()
+    Ende
+  Ende Methode
+Ende Klasse
+
+🧠 Übung 4:
+Die Klasse NewsData speichert eine Liste von observers.
+Du sollst zwei Methoden schreiben:
+
+addObserver(observer) → fügt einen neuen Observer zur Liste hinzu.
+
+notifyObservers() → ruft update() bei allen Observers auf.
+
+Klasse NewsData 
+  Methode addObserver(observer)
+    observers hinzufügen observer
+  Ende Methode addObserver
+
+  Methode notifyObservers()
+    Für i =0; i< observers.length; i++
+      observers[i].update()
+    Ende Für
+  Ende Methode notifyObservers
+Ende Klasse
