@@ -67,3 +67,30 @@ Klasse NewsData
     Ende Für
   Ende Methode notifyObservers
 Ende Klasse
+
+🧠 Übung 5:
+Die Klasse SensorData hat eine Liste observers.
+Du sollst 3 Methoden schreiben:
+
+addObserver(observer)
+
+removeObserver(observer)
+
+notifyObservers()
+
+
+Klasse SensorData
+  Methode addObserver(observer)
+    observers hinzufügen observer
+  Ende Methode
+
+  Methode removeObserver(observer)
+    observer aus observers entfernen
+  Ende Methode
+
+  Methode notifyObservers()
+    Für i = 0; i < observers.length; i++
+      observers[i].update()
+    Ende Für
+  Ende Methode
+Ende Klasse
