@@ -1,0 +1,21 @@
+
+
+🧠 Übung 1:
+In einer Wetter-App gibt es mehrere Anzeigen (Observer), z. B. Temperatur und Luftfeuchtigkeit.
+Die Klasse WeatherData hat eine Liste observers.
+
+Aufgabe:
+Schreib eine notifyObservers()-Funktion, die alle Observer informiert.
+
+
+Funktion notifyObservers()
+  Für i = 0; i < observers.length -1; i ++
+    observers[i]
+  Ende Für
+Ende Funktion
+
+🧠 Übung 2:
+In einem Spiel gibt es eine Klasse GameData. Wenn sich Punkte ändern, sollen alle Spieler-Observer informiert werden.
+
+Aufgabe:
+Schreib eine notifyObservers()-Funktion, die alle Spieler mit update() aufruft.
