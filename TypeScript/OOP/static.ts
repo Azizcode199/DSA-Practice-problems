@@ -12,13 +12,20 @@
 
 // Auto.zeigeMarke();
 
+// class Auto {
+//     static Motor = {
+//         info(): void {
+//             console.log("Motor läuft");
+//         }
+//     }
+// }
+
+// Auto.Motor.info(); // ✅ Ausgabe: Motor läuft
+
 class Auto {
-    static Motor = {
-        info(): void {
-            console.log("Motor läuft");
-        }
+    static{
+        console.log("Auto-klasse wird gestartet")
     }
 }
 
-Auto.Motor.info(); // ✅ Ausgabe: Motor läuft
 
