@@ -1,10 +1,4 @@
-public class Main {
-    public static void main(String[] args) {
-        Auto.zeigeMarke();
-        Auto.beispielAuto.fahren();
-        Auto.Motor.info();
-    }
-}
+
 
 class Auto {
     static String marke = "BMW";
@@ -33,5 +27,13 @@ class Auto {
         static void info() {
             System.out.println("Motor läuft");
         }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Auto.zeigeMarke();
+        Auto.beispielAuto.fahren();
+        Auto.Motor.info();
     }
 }
