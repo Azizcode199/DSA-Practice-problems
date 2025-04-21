@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Leistungsübersicht</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #aaa; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; }
+    .summe { font-weight: bold; background-color: #e0ffe0; }
+    .gesamt { font-weight: bold; background-color: #d0f0ff; }
+  </style>
+</head>
+<body>
+
+<h2>Leistungsübersicht</h2>
+
+<table id="ausgabe">
+  <thead>
+    <tr>
+      <th>Nr</th>
+      <th>Vorname</th>
+      <th>Nachname</th>
+      <th>Leistung-ID</th>
+      <th>Leistung</th>
+      <th>Stunden</th>
+      <th>Stundensatz</th>
+      <th>Gesamt</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<script src="main.js"></script>
+
+<!-- <script>
+// === Mitglieder-Datenbank ===
+const mitglieder = {
+  100: { vorname: "Jens", nachname: "Clausen" },
+  101: { vorname: "Sabrina", nachname: "Rader" },
+  101: { vorname: "Baktash", nachname: "Silkaburg" },
+};
+
+// === Journal mit Leistungen ===
+const journal = [
+  { mitgliedID: 100, leistungID: 300, stunden: 2 },
+  { mitgliedID: 100, leistungID: 300, stunden: 3 },
+  { mitgliedID: 100, leistungID: 301, stunden: 1 },
+  { mitgliedID: 101, leistungID: 400, stunden: 1 }
+];
+
+const stundensatz = 6;
+let aktuelleMitglied = journal[0].mitgliedID;
+let aktuelleLeistung = journal[0].leistungID;
+let anzStd = journal[0].stunden;
+let mSum = 0;
+let gSum = 0;
+let nr = 1;
+
+// === Ziel-Tabelle im HTML finden ===
+const tbody = document.querySelector("#ausgabe tbody");
+
+// === Funktion: Zeile schreiben ===
+function schreibeDaten(nr, mitgliedID, leistungID, stunden, stundensatz, gesamt) {
+  const mitglied = mitglieder[mitgliedID];
+  const row = document.createElement("tr");
+  row.innerHTML = `
+    <td>${nr}</td>
+    <td>${mitglied.vorname}</td>
+    <td>${mitglied.nachname}</td>
+    <td>${leistungID}</td>
+    <td>${stunden}</td>
+    <td>${stundensatz.toFixed(2)} €</td>
+    <td>${gesamt.toFixed(2)} €</td>
+  `;
+  tbody.appendChild(row);
+}
+
+// === Funktion: Mitgliedssumme schreiben ===
+function schreibeSumme(mSum) {
+  const row = document.createElement("tr");
+  row.classList.add("summe");
+  row.innerHTML = `<td colspan="6">➤ Summe Mitglied</td><td>${mSum.toFixed(2)} €</td>`;
+  tbody.appendChild(row);
+}
+
+// === Funktion: Gesamtsumme schreiben ===
+function schreibeGesamtsumme(gSum) {
+  const row = document.createElement("tr");
+  row.classList.add("gesamt");
+  row.innerHTML = `<td colspan="6">Gesamtsumme</td><td>${gSum.toFixed(2)} €</td>`;
+  tbody.appendChild(row);
+}
+
+// === Hauptverarbeitung ===
+for (let i = 1; i < journal.length; i++) {
+  const eintrag = journal[i];
+
+  if (eintrag.leistungID === aktuelleLeistung && eintrag.mitgliedID === aktuelleMitglied) {
+    anzStd += eintrag.stunden;
+  } else {
+    const lSum = anzStd * stundensatz;
+    schreibeDaten(nr, aktuelleMitglied, aktuelleLeistung, anzStd, stundensatz, lSum);
+    mSum += lSum;
+
+    if (eintrag.mitgliedID !== aktuelleMitglied) {
+      schreibeSumme(mSum);
+      gSum += mSum;
+      mSum = 0;
+      nr = 1;
+    } else {
+      nr++;
+    }
+
+    aktuelleMitglied = eintrag.mitgliedID;
+    aktuelleLeistung = eintrag.leistungID;
+    anzStd = eintrag.stunden;
+  }
+}
+
+// === Letzter Eintrag schreiben ===
+const letzteSumme = anzStd * stundensatz;
+schreibeDaten(nr, aktuelleMitglied, aktuelleLeistung, anzStd, stundensatz, letzteSumme);
+mSum += letzteSumme;
+gSum += mSum;
+schreibeSumme(mSum);
+schreibeGesamtsumme(gSum);
+</script> -->
+
+</body>
+</html>
