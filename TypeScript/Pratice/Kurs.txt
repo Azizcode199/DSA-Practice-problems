@@ -1,0 +1,39 @@
+rechnungsbetrag_ermittlung(kursteilnehmer, kundennummer, anzahl) : Double
+
+	anzahlProKunde = 0          // 👉 Zählt, wie viele Kurse der Kunde hat
+	rechnungsbetrag = 0         // 👉 Hier wird der Betrag gesammelt 💰
+	rabatt = 0                  // 👉 Hier wird der Rabatt gespeichert 🎁
+	
+	for(i = 0; i < anzahl; i++)   // 👉 Schleife: Gehe durch alle Teilnehmer 🔄
+	
+		if(kursteilnehmer[i].kundennummer == kundennummer)  // 👉 Ist dieser Kurs für unseren Kunden?
+		
+			anzahlProKunde = anzahlProKunde + 1   // 👉 Zähle die Kurse für diesen Kunden ➕
+
+			// 👉 Rabatt berechnen 🎁
+			rabatt = kursteilnehmer[i].kursgebühr / 100 * kursteilnehmer[i].frühbucherrabatt
+                                        rabatt = 480 / 100 * 20 = 94
+			
+			// 👉 Kursgebühr minus Rabatt zum Rechnungsbetrag dazu 💵
+			rechnungsbetrag += kursteilnehmer[i].kursgebühr - rabatt
+           
+
+			
+		endIf
+		
+	endFor
+	
+	// 👉 Mengenrabatt: 3-4 Kurse = 3% Rabatt 😎
+	if(anzahlProkunde == 3  OR anzahlProKunde == 4)
+		rechnungsbetrag = rechnungsbetrag * 0.97
+	// 👉 5 oder mehr Kurse = 5% Rabatt 😍
+	elseif(anzahlProKunde >= 5)
+		rechnungsbetrag = rechnungsbetrag * 0.95
+	endIf
+
+	// 👉 Umsatzsteuer dazu: 19% extra 🧾
+	rechnungsbetrag = rechnungsbetrag * 1.19
+
+	return rechnungsbetrag   // 👉 Gib den fertigen Betrag zurück ✅
+
+ENDE rechnungsbetrag_ermittlung
