@@ -1,0 +1,10 @@
+Funktion maxUmsatz(maxUmsatz)
+    max = maxUmsatz[0]
+    
+    Für i = 1; i < 3; i ++ dann
+        Wenn maxUmsatz[i] > max
+            max = maxUmsatz
+        ende Wenn
+    ende
+    return max
+ENDE Funktion
