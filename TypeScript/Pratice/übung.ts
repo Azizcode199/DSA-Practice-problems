@@ -163,3 +163,100 @@ function häufigste(arr: number[]) : number {
 }
 
 console.log(häufigste([212, 3, 3, 3, 3, 2, 5, 444,555,555,555,555,555,55,555]))
+console.log("--------------------------------")
+// Aufgabe:
+// Prüfe, ob das Array ein Palindrom ist.
+// Ein Palindrom ist ein Array, das vorwärts und rückwärts gleich ist.
+// Beispiel:
+// [1, 2, 3, 2, 1] → Ja, es ist ein Palindrom.
+// [4, 5, 6, 5, 4] → Ja.
+// [1, 2, 3, 4, 5] → Nein.
+
+function palindrom(arr: number[]) : string {
+ for(let i = 0; i < arr.length / 2; i++){
+  if(arr[i] != arr[arr.length -1 -i]){
+   return 'nein'
+  }
+ }
+  return 'ja'
+}
+
+console.log(palindrom([1, 2, 3, 2, 1]))
+console.log("----------- einzigartige --------------")
+
+// Aufgabe:
+// Prüfe, ob ein Array nur einzigartige Zahlen enthält.
+// Beispiel:
+// [1, 2, 3, 4] → Ja (alles verschieden)
+// [5, 3, 2, 5, 1] → Nein (5 kommt doppelt vor)
+
+function einzigartige(arr: number[]) : string{
+
+  for(let i = 0; i < arr.length; i++){
+    for(let j = i + 1; j < arr.length; j++){
+      if(arr[i] === arr[j]){
+        return 'nein'
+      }
+    }
+  }
+  return 'ja'
+}
+
+console.log(einzigartige([1, 2, 3, 4])) 
+console.log(einzigartige([5, 3, 2, 5, 1]))
+
+// Aufgabe:
+// Erstelle ein neues Array, in dem alle Zahlen verdoppelt werden.
+// Beispiel:
+// Original: [2, 4, 6]
+// Neu: [4, 8, 12]
+console.log("-----------verdoppelt---------------")
+function verdoppelt(arr: number[]) : number[] {
+  let mul= []
+  for(let i= 0; i<arr.length; i++){
+    mul.push(2 * arr[i]) 
+  }
+
+  return mul
+}
+
+console.log(verdoppelt([2, 4, 6]))
+
+console.log("-----------ungeraden Zahlen ---------------")
+// Aufgabe:
+// Finde die Summe nur der ungeraden Zahlen im Array.
+// Beispiel:
+// Array: [3, 4, 7, 2, 5]
+// Ungerade Zahlen: 3, 7, 5
+// Summe: 15
+
+function ungeradenZahlen(arr: number[]) : number{
+  let summe = 0
+  for(let i =0; i < arr.length;i++){
+    if(arr[i] % 2 !=0){
+      summe += arr[i]
+    }
+  }
+  return summe
+}
+
+console.log(ungeradenZahlen([3, 4, 7, 2, 5]))
+
+// Aufgabe:
+// Erstelle ein neues Array, in dem alle Zahlen größer als 5 sind.
+// Beispiel:
+// Original: [3, 8, 1, 7, 5, 9]
+// Neu: [8, 7, 9]
+console.log('------Zahlen größer---------')
+function zahlenGrößer(arr: number[]) : number[]{
+  let größer = []
+  for(let i =0; i < arr.length; i++){
+    if(arr[i] > 5){
+      größer.push(arr[i])
+    }
+  }
+  return größer
+
+}
+
+console.log(zahlenGrößer([3, 8, 1, 7, 5, 9]))
