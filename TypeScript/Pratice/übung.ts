@@ -250,7 +250,7 @@ console.log(ungeradenZahlen([3, 4, 7, 2, 5]))
 console.log('------Zahlen größer---------')
 function zahlenGrößer(arr: number[]) : number[]{
   let größer = []
-  for(let i =0; i < arr.length; i++){
+  for(let i = 0; i < arr.length; i++){
     if(arr[i] > 5){
       größer.push(arr[i])
     }
