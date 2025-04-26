@@ -47,3 +47,4 @@ function statistik(verbrauch: number[][], limit: number): Jahresstatistik {
 
     return new Jahresstatistik(minMonat, maxMonat, greaterLimit);
 }
+
