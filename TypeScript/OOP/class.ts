@@ -31,7 +31,7 @@ class Students extends Persons {
     
 }
 
-const person1 = new Persons("Baktash", 35, ["walking", "Fitness"]);
+const person1: Persons = new Persons("Baktash", 35, ["walking", "Fitness"]);
 const person2 = new Persons("Mike", 35, ["Boxing", "Footbal"]);
 const std = new Students("Thoma", 35, ["Coder", "Fitness"] ,2);
 
