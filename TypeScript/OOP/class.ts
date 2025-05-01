@@ -9,14 +9,15 @@ class Persons {
         this.hobbies = hobbies
     }
 
+    
     public vorstellung(): string {
-        return `Hallo, ich bin ${this.name}, bin ${this.age} Jahre alt und liebe ${this.hobbies.join(', ')}. `;
+        return `Hallo, ich bin ${this.name}, bin ${this.age} Jahre alt und liebe ${this.hobbies.join(', ')}.`;
     }
 
 }
 
 class Students extends Persons {
-    grade : number;
+    private grade : number;
 
     constructor(name : string, age : number, hobbies:string[], grade : number){
         super(name, age, hobbies);
