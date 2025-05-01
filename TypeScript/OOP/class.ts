@@ -1,3 +1,4 @@
+// class, Inheritance, Access Modifiers, shorthand properties
 class Persons {
     private name:string;
     private age: number;
