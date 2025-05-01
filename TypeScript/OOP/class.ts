@@ -1,18 +1,39 @@
 class Persons {
-    name:string;
-    age: number;
-    hobbies: string[];
+    private name:string;
+    private age: number;
+    private hobbies: string[];
 
     constructor(name : string, age : number, hobbies:string[]){
         this.name = name
         this.age = age
         this.hobbies = hobbies
     }
+
+    public vorstellung(): string {
+        return `Hallo, ich bin ${this.name}, bin ${this.age} Jahre alt und liebe ${this.hobbies.join(', ')}. `;
+    }
+
+}
+
+class Students extends Persons {
+    grade : number;
+
+    constructor(name : string, age : number, hobbies:string[], grade : number){
+        super(name, age, hobbies);
+       this.grade = grade
+    }
+
+    vorstellung(): string {
+        return `${super.vorstellung()}Meine Note ist ${this.grade}.`;
+    }
+    
+    
 }
 
 const person1 = new Persons("Baktash", 35, ["walking", "Fitness"]);
 const person2 = new Persons("Mike", 35, ["Boxing", "Footbal"]);
-const person3 = new Persons("Thoma", 35, ["Coder", "Fitness"]);
-console.log(person1); 
-console.log(person2); 
-console.log(person3)
+const std = new Students("Thoma", 35, ["Coder", "Fitness"] ,2);
+
+console.log(person1.vorstellung()); 
+console.log("|----Inheritance----|")
+console.log(std.vorstellung())
