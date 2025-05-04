@@ -206,31 +206,4 @@ console.log("---------------------------")
 // Finde die Summe aller Zahlen im Array.
 // Zeige: „Summe ist: ...“
 
-function sum(zahlen : number[]): number{
-    let summe = 0;
-    for(let i = 0; i < zahlen.length; i++){
-        summe = summe + zahlen[i]
-    }
-    console.log(`Summe ist: ${summe}`)
-    return summe
-}
 
-sum([4, 8, 1, 6, 3])
-console.log("-------------------------")
-// Aufgabe:
-// Du hast ein Array:
-// let zahlen = [4, 8, 1, 6, 3];
-// Finde die Durchschnitt-Zahl (Mittelwert).
-// Zeige: „Durchschnitt ist: ...“
-
-function durchschnitt(zahlen : number[]) : number{
-    let summe = 0;
-    for(let i = 0; i < zahlen.length; i++){
-        summe = summe + zahlen[i]
-    }
-    let dur = summe / zahlen.length
-    console.log(`Durchschnitt ist: ${dur}`)
-    return summe
-}
-
-durchschnitt([4, 8, 1, 6, 3])
